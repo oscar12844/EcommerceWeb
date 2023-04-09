@@ -50,8 +50,8 @@ export const coursesCard = [
     coursesName: "English Trial Course",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
-        name: "by Sunil Bishowkaram",
+        dcover: "./images/team/t7.webp",
+        name: "by Ava Patel",
         totalTime: "1 lesson (1.5 hour)",
       },
     ],
@@ -63,8 +63,8 @@ export const coursesCard = [
     coursesName: "English Complete Course",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
-        name: "by John Smith",
+        dcover: "./images/team/t8.webp",
+        name: "by Jackson Davis",
         totalTime: "4 lessons (4 hours) per week",
       },
     ],
@@ -76,8 +76,8 @@ export const coursesCard = [
     coursesName: "English Reading Course",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
-        name: "by Ram Gurung",
+        dcover: "./images/team/t1.webp",
+        name: "by Adrian Molises",
         totalTime: "1 lesson (1 hour) per week",
       },
     ],
@@ -89,8 +89,8 @@ export const coursesCard = [
     coursesName: "English Writing Course",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
-        name: "by Saroj Nepal",
+        dcover: "./images/team/t2.webp",
+        name: "by Arthur MaGregor",
         totalTime: "1 lesson (1 hour) per week",
       },
     ],
@@ -102,8 +102,8 @@ export const coursesCard = [
     coursesName: "English Listening Course",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
-        name: "by Prabin Thapa Mager",
+        dcover: "./images/team/t3.webp",
+        name: "by Anna Hanzen",
         totalTime: "1 lesson (1 hour) per week",
       },
     ],
@@ -115,8 +115,8 @@ export const coursesCard = [
     coursesName: "English Speaking Course",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
-        name: "by Sunil Bishowkaram",
+        dcover: "./images/team/t4.webp",
+        name: "by Brian Wooden",
         totalTime: "1 lesson (1 hour) per week",
       },
     ],
@@ -128,8 +128,8 @@ export const coursesCard = [
     coursesName: "IELTS Express Course",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
-        name: "by Bryn Parrish",
+        dcover: "./images/team/t5.webp",
+        name: "by Marcus Lee",
         totalTime: "1 practice package",
       },
     ],
@@ -141,8 +141,8 @@ export const coursesCard = [
     coursesName: "English Real-Time Course",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
-        name: "by Aston Barnes",
+        dcover: "./images/team/t6.webp",
+        name: "by Emily Johnson",
         totalTime: "1 lesson (1 hour) per week",
       },
     ],
@@ -154,42 +154,42 @@ export const team = [
   {
     cover: "./images/team/t1.webp",
     name: "Ph.D Adrian Molises",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    work: "English Reading Tutor",
   },
   {
     cover: "./images/team/t2.webp",
     name: "Ph.D Arthur MaGregor",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    work: "English Writing Tutor",
   },
   {
     cover: "./images/team/t3.webp",
     name: "Ph.D Anna Hanzen",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    work: "English Speaking Tutor",
   },
   {
     cover: "./images/team/t4.webp",
     name: "Ph.D Brian Wooden",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    work: "English Listening Tutor",
   },
   {
     cover: "./images/team/t5.webp",
-    name: "Ph.D Adrian Molises",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    name: "Ph.D Marcus Lee",
+    work: "IELTS Tutor",
   },
   {
     cover: "./images/team/t6.webp",
-    name: "Ph.D Arthur MaGregor",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    name: "Ph.D Emily Johnson",
+    work: "Real-Time Course Manager",
   },
   {
     cover: "./images/team/t7.webp",
-    name: "Ph.D Anna Hanzen",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    name: "Ph.D Ava Patel",
+    work: "Trial Course Tutor",
   },
   {
     cover: "./images/team/t8.webp",
-    name: "Ph.D Brian Wooden",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    name: "Ph.D Jackson Davis",
+    work: "VLG Leader",
   },
 ];
 export const price = [
