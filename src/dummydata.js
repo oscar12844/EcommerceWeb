@@ -192,26 +192,26 @@ export const team = [
     work: "VLG Leader",
   },
 ];
-export const price = [
+export const realtimespeaker = [
   {
     name: "Samantha Martinez",
-    price: "49K",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    desc: "I come from United States. I am a professional English teacher. I have been teaching English for 10 years.",
+    cover: "./images/speakers/speaker1.png",
   },
   {
-    name: "Noah Kim",
-    price: "79K",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    name: "Isabella Taylor",
+    desc: "I come comes from United Kingdom. I am a professional English speaker. I held a lot of English speaking competitions.",
+    cover: "./images/speakers/speaker2.png",
   },
   {
     name: "Olivia Singh",
-    price: "109k",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    desc: "I come comes from Canada. I am a professional English teacher. I have been teaching English for 5 years.",
+    cover: "./images/speakers/speaker3.png",
   },
   {
-    name: "Ethan Chen",
-    price: "149K",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    name: "Mason Patel",
+    desc: "I come comes from Australia. I am a professional English teacher. I have been teaching English for 5 years.",
+    cover: "./images/speakers/speaker4.png",
   },
 ];
 export const faq = [

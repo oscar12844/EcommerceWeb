@@ -1,16 +1,16 @@
 import React from "react";
 import Back from "../common/back/Back";
-import PriceCard from "./PriceCard";
-import "./price.css";
+import PairSpeakerCard from "./PairSpeakerCard";
+import "./realtimepair.css";
 import Faq from "./Faq";
 
 const Pricing = () => {
   return (
     <>
       <Back title="Choose The Native Speaker" />
-      <section className="price padding">
+      <section className="realtime padding">
         <div className="container grid">
-          <PriceCard />
+          <PairSpeakerCard />
         </div>
       </section>
       <Faq />

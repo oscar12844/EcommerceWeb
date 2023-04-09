@@ -1,21 +1,27 @@
-.price .items {
+.realtime .items {
   padding: 40px;
   text-align: center;
 }
-.price h1 {
+.realtime h1 {
   font-size: 50px;
   margin: 20px 0;
   color: #133696;
 }
-.price h1 span {
+.realtime h1 span {
   font-size: 20px;
   margin-right: 5px;
   color: #000;
 }
-.price p {
+.realtime p {
   color: grey;
   margin: 40px 0;
 }
+
+.realtime img {
+  width: 100%;
+  height: 100%;
+}
+
 /*--------------faq-------------*/
 .faq .container {
   max-width: 70%;
