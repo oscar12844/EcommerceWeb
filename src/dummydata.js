@@ -50,7 +50,7 @@ export const coursesCard = [
     coursesName: "English Trial Course",
     courTeacher: [
       {
-        dcover: "./images/team/t7.webp",
+        dcover: "../images/team/t7.webp",
         name: "by Ava Patel",
         totalTime: "1 lesson (1.5 hour)",
       },
@@ -63,7 +63,7 @@ export const coursesCard = [
     coursesName: "English Complete Course",
     courTeacher: [
       {
-        dcover: "./images/team/t8.webp",
+        dcover: "../images/team/t8.webp",
         name: "by Jackson Davis",
         totalTime: "4 lessons (4 hours) per week",
       },
@@ -76,7 +76,7 @@ export const coursesCard = [
     coursesName: "English Reading Course",
     courTeacher: [
       {
-        dcover: "./images/team/t1.webp",
+        dcover: "../images/team/t1.webp",
         name: "by Adrian Molises",
         totalTime: "1 lesson (1 hour) per week",
       },
@@ -89,7 +89,7 @@ export const coursesCard = [
     coursesName: "English Writing Course",
     courTeacher: [
       {
-        dcover: "./images/team/t2.webp",
+        dcover: "../images/team/t2.webp",
         name: "by Arthur MaGregor",
         totalTime: "1 lesson (1 hour) per week",
       },
@@ -102,7 +102,7 @@ export const coursesCard = [
     coursesName: "English Listening Course",
     courTeacher: [
       {
-        dcover: "./images/team/t3.webp",
+        dcover: "../images/team/t3.webp",
         name: "by Anna Hanzen",
         totalTime: "1 lesson (1 hour) per week",
       },
@@ -115,7 +115,7 @@ export const coursesCard = [
     coursesName: "English Speaking Course",
     courTeacher: [
       {
-        dcover: "./images/team/t4.webp",
+        dcover: "../images/team/t4.webp",
         name: "by Brian Wooden",
         totalTime: "1 lesson (1 hour) per week",
       },
@@ -128,7 +128,7 @@ export const coursesCard = [
     coursesName: "IELTS Express Course",
     courTeacher: [
       {
-        dcover: "./images/team/t5.webp",
+        dcover: "../images/team/t5.webp",
         name: "by Marcus Lee",
         totalTime: "1 practice package",
       },
@@ -141,7 +141,7 @@ export const coursesCard = [
     coursesName: "English Real-Time Course",
     courTeacher: [
       {
-        dcover: "./images/team/t6.webp",
+        dcover: "../images/team/t6.webp",
         name: "by Emily Johnson",
         totalTime: "1 lesson (1 hour) per week",
       },
@@ -194,22 +194,22 @@ export const team = [
 ];
 export const price = [
   {
-    name: "BASIC PLAN",
+    name: "Samantha Martinez",
     price: "49K",
     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
   {
-    name: "BEGINNER PLAN",
+    name: "Noah Kim",
     price: "79K",
     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
   {
-    name: "PREMIUM PLAN",
+    name: "Olivia Singh",
     price: "109k",
     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
   {
-    name: "ULTIMATE PLAN",
+    name: "Ethan Chen",
     price: "149K",
     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
