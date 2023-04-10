@@ -9,87 +9,23 @@ import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/common/footer/Footer";
 import Home from "./components/home/Home";
-import Login from "./Login";
-import SignUp from "./SignUp";
-
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route
-          path="/"
-          element={
-            <>
-              <Header />
-              <Home />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <>
-              <Header />
-              <About />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/courses"
-          element={
-            <>
-              <Header />
-              <CourseHome />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/team"
-          element={
-            <>
-              <Header />
-              <Team />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/realtimepair"
-          element={
-            <>
-              <Header />
-              <RealtimePair />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/journal"
-          element={
-            <>
-              <Header />
-              <Blog />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <>
-              <Header />
-              <Contact />
-              <Footer />
-            </>
-          }
-        />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/courses" component={CourseHome} />
+          <Route exact path="/team" component={Team} />
+          <Route exact path="/realtimepair" component={RealtimePair} />
+          <Route exact path="/journal" component={Blog} />
+          <Route exact path="/contact" component={Contact} />
+        </Switch>
+        <Footer />
+      </Router>
+    </>
   );
 }
 
