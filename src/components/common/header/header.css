@@ -1,11 +1,14 @@
 /*--------head------------*/
 .head {
-  padding: 20px 0;
-  color: #7091ec;
+  padding: 30px 0;
+  color: #133696;
+  background-color: #d1d1d1dc;
+  margin: 0 40px;
 }
 .logo h1 {
   font-size: 35px;
   font-weight: 900;
+  margin-left: -5px;
 }
 .head .icon {
   margin-left: 10px;
@@ -13,8 +16,8 @@
 /*--------head------------*/
 /*--------header------------*/
 header {
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 0 30px;
+  background-color: #ffffff33;
+  margin: 0 40px;
 }
 header .nav {
   display: flex !important;
