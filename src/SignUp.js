@@ -297,7 +297,7 @@ export default function SignUp() {
             <figure>
               <img src={Login_logo} alt="Login Logo"></img>
             </figure>
-            <Link to="/" className={styles["signup-image-link"]}>
+            <Link to="/login" className={styles["signup-image-link"]}>
               I am already registered
             </Link>
           </div>
