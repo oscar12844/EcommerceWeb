@@ -71,7 +71,7 @@ function App() {
             }
           />
           <Route
-            path="/journal"
+            path="/mycourse"
             element={
               <>
                 <Header />
