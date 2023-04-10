@@ -9,61 +9,21 @@ import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/common/footer/Footer";
 import Home from "./components/home/Home";
-import Login from "./Login";
-import SignUp from "./SignUp";
-
 function App() {
   return (
     <>
       <Router>
+        <Header />
         <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/home">
-            <Header />
-            <Home />
-            <Footer />
-          </Route>
-
-          <Route exact path="/about">
-            <Header />
-            <About />
-            <Footer />
-          </Route>
-
-          <Route exact path="/courses">
-            <Header />
-            <CourseHome />
-            <Footer />
-          </Route>
-
-          <Route exact path="/team">
-            <Header />
-            <Team />
-            <Footer />
-          </Route>
-
-          <Route exact path="/realtimepair">
-            <Header />
-            <RealtimePair />
-            <Footer />
-          </Route>
-
-          <Route exact path="/journal">
-            <Header />
-            <Blog />
-            <Footer />
-          </Route>
-
-          <Route exact path="/contact">
-            <Header />
-            <Contact />
-            <Footer />
-          </Route>
-          <Route exact path="*">
-            <h1>404 Not Found</h1>
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/courses" component={CourseHome} />
+          <Route exact path="/team" component={Team} />
+          <Route exact path="/realtimepair" component={RealtimePair} />
+          <Route exact path="/journal" component={Blog} />
+          <Route exact path="/contact" component={Contact} />
         </Switch>
+        <Footer />
       </Router>
     </>
   );
