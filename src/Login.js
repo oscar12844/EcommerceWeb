@@ -57,7 +57,7 @@ export default function Login() {
               snapshot.val().password === state.password
             ) {
               console.log("LOGIN SUCCESSFUL");
-              navigate("/home");
+              navigate.push("/home");
             } else {
               console.log("No data available");
             }

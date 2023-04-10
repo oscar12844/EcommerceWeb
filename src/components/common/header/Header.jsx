@@ -16,7 +16,7 @@ const Header = () => {
             onClick={() => setClick(false)}
           >
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/home">Home</Link>
             </li>
             <li>
               <Link to="/courses">All Courses</Link>
