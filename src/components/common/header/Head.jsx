@@ -40,7 +40,7 @@ const Head = () => {
     <>
       <section className="head">
         <div className="container flexSB">
-          <div style={{ maxWidth: "120px" }}>
+          <div style={{ maxWidth: "100px", maxHeight: "100px" }}>
             <img src="./images/logo.webp" alt="logo" />
           </div>
 
