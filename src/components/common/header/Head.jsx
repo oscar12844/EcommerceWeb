@@ -59,11 +59,11 @@ const Head = () => {
               <>
                 <i
                   className="fas fa-sign-out-alt icon"
-                  onClick={handleClickdialoglogin}
+                  onClick={handleClickdialogsignout}
                 ></i>
                 <Dialog
-                  open={dialoglogin}
-                  onClose={handledialogCloselogin}
+                  open={dialogsignout}
+                  onClose={handledialogClosesignout}
                   aria-labelledby="alert-dialog-title"
                   aria-describedby="alert-dialog-description"
                 >
@@ -76,7 +76,7 @@ const Head = () => {
                     </DialogContentText>
                   </DialogContent>
                   <DialogActions>
-                    <Button onClick={handledialogCloselogin} color="error">
+                    <Button onClick={handledialogClosesignout} color="error">
                       No
                     </Button>
                     <Button
@@ -98,11 +98,11 @@ const Head = () => {
               <>
                 <i
                   className="fas fa-sign-in-alt icon"
-                  onClick={handleClickdialogsignout}
+                  onClick={handleClickdialoglogin}
                 ></i>
                 <Dialog
-                  open={dialogsignout}
-                  onClose={handledialogClosesignout}
+                  open={dialoglogin}
+                  onClose={handledialogCloselogin}
                   aria-labelledby="alert-dialog-title"
                   aria-describedby="alert-dialog-description"
                 >
@@ -113,7 +113,7 @@ const Head = () => {
                     </DialogContentText>
                   </DialogContent>
                   <DialogActions>
-                    <Button onClick={handledialogClosesignout} color="error">
+                    <Button onClick={handledialogCloselogin} color="error">
                       No
                     </Button>
                     <Button
