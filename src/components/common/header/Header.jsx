@@ -8,16 +8,20 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { Button } from "@mui/material";
+import { async } from "q";
 
 const Header = () => {
-  const [click, setClick] = useState(false);
   const nagivate = useNavigate();
   const [login, setLogin] = useState(false);
+  const [delay, setDelay] = useState(false);
   useEffect(() => {
     if (localStorage.getItem("user")) {
       setLogin(true);
+    } else {
+      setLogin(false);
     }
-  }, [login]);
+    setDelay(false);
+  }, [delay]);
 
   const [dialoglogin, setdialoglogin] = useState(false);
 
@@ -86,7 +90,8 @@ const Header = () => {
                       onClick={() => {
                         localStorage.removeItem("user");
                         localStorage.removeItem("userid");
-                        setLogin(false);
+                        handledialogClosesignout();
+                        setDelay(true);
                         nagivate("/");
                       }}
                       color="success"
@@ -121,6 +126,7 @@ const Header = () => {
                     </Button>
                     <Button
                       onClick={() => {
+                        handledialogCloselogin();
                         nagivate("/login");
                       }}
                       color="success"
@@ -137,10 +143,7 @@ const Header = () => {
       </section>
       <header>
         <nav className="flexSB">
-          <ul
-            className={click ? "mobile-nav" : "flexSB "}
-            onClick={() => setClick(false)}
-          >
+          <ul className="flexSB">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -172,13 +175,6 @@ const Header = () => {
           <div className="start">
             <div className="button">START TO LEARN</div>
           </div>
-          <button className="toggle" onClick={() => setClick(!click)}>
-            {click ? (
-              <i className="fa fa-times"> </i>
-            ) : (
-              <i className="fa fa-bars"></i>
-            )}
-          </button>
         </nav>
       </header>
     </>
