@@ -24,6 +24,8 @@ const Head = () => {
             <i
               className="fas fa-sign-out-alt icon"
               onClick={() => {
+                localStorage.removeItem("user");
+                localStorage.removeItem("userid");
                 nagivate("/");
               }}
             ></i>
