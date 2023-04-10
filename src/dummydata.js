@@ -313,9 +313,9 @@ export const testimonal = [
   },
   {
     id: 3,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    cover: "./images/testo/t3.webp",
+    name: "Miles Haney",
+    post: "WRITING COURSE STUDENT",
+    desc: "The materials just help me so much. Ideas are endlessly popping up to my head when writing. There's nothing to it!!  ",
+    cover: "./images/testo/kid3.jpg",
   },
 ];
