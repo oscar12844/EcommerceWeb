@@ -61,7 +61,7 @@ export default function Login() {
               localStorage.setItem("userid", hashedEmail);
               console.log(localStorage.getItem("user"));
               console.log(localStorage.getItem("userid"));
-              navigate("/home");
+              navigate("/");
             } else {
               console.log("No data available");
             }

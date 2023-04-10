@@ -40,13 +40,13 @@ const Header = () => {
           <div className="start">
             <div className="button">START TO LEARN</div>
           </div>
-          <button className="toggle" onClick={() => setClick(!click)}>
+          {/* <button className="toggle" onClick={() => setClick(!click)}>
             {click ? (
               <i className="fa fa-times"> </i>
             ) : (
               <i className="fa fa-bars"></i>
             )}
-          </button>
+          </button> */}
         </nav>
       </header>
     </>

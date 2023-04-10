@@ -125,7 +125,7 @@ export default function SignUp() {
             // Data saved successfully!
             // show a pop up screen
             // back to login page
-            navigate("/");
+            navigate("/login");
           })
           .catch((error) => {
             // The write failed...
