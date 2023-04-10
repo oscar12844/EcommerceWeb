@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./css/loginStyle.module.css";
 import icons from "./fonts/material-icon/css/material-design-iconic-font.min.module.css";
 import GoogleIcon from "@mui/icons-material/Google";
@@ -32,7 +32,7 @@ export default function SignUp() {
   const [emptyPassword, setemptyPassword] = useState(false);
   const [emptyrepeatedPassword, setemptyrepeatedPassword] = useState(false);
 
-  const navigate = useHistory();
+  const navigate = useNavigate();
 
   const [state, setState] = useState({
     username: "",
@@ -125,7 +125,7 @@ export default function SignUp() {
             // Data saved successfully!
             // show a pop up screen
             // back to login page
-            navigate.push("/");
+            navigate("/");
           })
           .catch((error) => {
             // The write failed...

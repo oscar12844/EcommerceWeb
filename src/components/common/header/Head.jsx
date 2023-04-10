@@ -1,8 +1,8 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Head = () => {
-  const nagivate = useHistory();
+  const nagivate = useNavigate();
   return (
     <>
       <section className="head">
@@ -20,7 +20,7 @@ const Head = () => {
             <i
               className="fas fa-sign-out-alt icon"
               onClick={() => {
-                nagivate.push("/");
+                nagivate("/");
               }}
             ></i>
           </div>

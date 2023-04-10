@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./css/loginStyle.module.css";
 import icons from "./fonts/material-icon/css/material-design-iconic-font.min.module.css";
 import GoogleIcon from "@mui/icons-material/Google";
@@ -23,7 +23,7 @@ const firebaseConfig = {
 };
 
 export default function Login() {
-  const navigate = useHistory();
+  const navigate = useNavigate();
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [state, setState] = useState({
@@ -57,7 +57,7 @@ export default function Login() {
               snapshot.val().password === state.password
             ) {
               console.log("LOGIN SUCCESSFUL");
-              navigate.push("/home");
+              navigate("/home");
             } else {
               console.log("No data available");
             }
