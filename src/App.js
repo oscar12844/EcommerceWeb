@@ -10,6 +10,7 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/common/footer/Footer";
 import Home from "./components/home/Home";
 import Reading from "./components/readingnotes/Reading";
+import Writing from "./components/writingnotes/Writing";
 function App() {
   return (
     <>
@@ -21,9 +22,10 @@ function App() {
           <Route exact path="/courses" component={CourseHome} />
           <Route exact path="/team" component={Team} />
           <Route exact path="/realtimepair" component={RealtimePair} />
-          <Route exact path="/journal" component={Blog} />
+          <Route exact path="/mycourse" component={Blog} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/reading" component={Reading} />
+          <Route exact path="/writing" component={Writing} />
         </Switch>
         <Footer />
       </Router>
