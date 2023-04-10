@@ -16,7 +16,7 @@ const Header = () => {
             onClick={() => setClick(false)}
           >
             <li>
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/courses">All Courses</Link>
@@ -31,7 +31,7 @@ const Header = () => {
               <Link to="/realtimepair">Real-Time Pair</Link>
             </li>
             <li>
-              <Link to="/journal">Journal</Link>
+              <Link to="/journal">MyCourse</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>
@@ -40,13 +40,13 @@ const Header = () => {
           <div className="start">
             <div className="button">START TO LEARN</div>
           </div>
-          {/* <button className="toggle" onClick={() => setClick(!click)}>
+          <button className="toggle" onClick={() => setClick(!click)}>
             {click ? (
               <i className="fa fa-times"> </i>
             ) : (
               <i className="fa fa-bars"></i>
             )}
-          </button> */}
+          </button>
         </nav>
       </header>
     </>
