@@ -31,7 +31,7 @@ const Header = () => {
               <Link to="/realtimepair">Real-Time Pair</Link>
             </li>
             <li>
-              <Link to="/journal">MyCourse</Link>
+              <Link to="/mycourse">MyCourse</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>

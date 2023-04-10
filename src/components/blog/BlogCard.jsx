@@ -26,7 +26,7 @@ const BlogCard = () => {
               </span>
             </div>
             <h1>
-              <Link to="/reading">{val.title}</Link>
+              <Link to={val.link}>{val.title}</Link>
             </h1>
             <p>{val.desc}</p>
           </div>
