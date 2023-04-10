@@ -7,6 +7,10 @@ const Head = () => {
     <>
       <section className="head">
         <div className="container flexSB">
+          <div style={{ maxWidth: "120px" }}>
+            <img src="./images/logo.webp" alt="logo" />
+          </div>
+
           <div className="logo">
             <h1>Virtual Language Gate</h1>
             <span>Learn Virtually</span>
