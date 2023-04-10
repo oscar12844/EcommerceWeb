@@ -57,6 +57,10 @@ export default function Login() {
               snapshot.val().password === state.password
             ) {
               console.log("LOGIN SUCCESSFUL");
+              localStorage.setItem("user", snapshot.val().username);
+              localStorage.setItem("userid", hashedEmail);
+              console.log(localStorage.getItem("user"));
+              console.log(localStorage.getItem("userid"));
               navigate("/home");
             } else {
               console.log("No data available");
