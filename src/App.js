@@ -9,6 +9,7 @@ import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/common/footer/Footer";
 import Home from "./components/home/Home";
+import Reading from "./components/readingnotes/Reading";
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/realtimepair" component={RealtimePair} />
           <Route exact path="/journal" component={Blog} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/reading" component={Reading} />
         </Switch>
         <Footer />
       </Router>

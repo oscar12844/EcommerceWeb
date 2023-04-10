@@ -243,11 +243,11 @@ export const faq = [
 export const blog = [
   {
     id: 1,
-    type: "admin",
+    type: "Ava Patel",
     date: "JAN. 18, 2021",
     com: "3 COMMENTS ",
-    title: "Build your Dream Software & Engineering Career",
-    desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+    title: "English Reading Course",
+    desc: "You have 1 lesson to be watched now. Please watch it as soon as possible!",
     cover: "../images/blog/b1.webp",
   },
   {
@@ -317,5 +317,14 @@ export const testimonal = [
     post: "WRITING COURSE STUDENT",
     desc: "The materials just help me so much. Ideas are endlessly popping up to my head when writing. There's nothing to it!!  ",
     cover: "./images/testo/kid3.jpg",
+  },
+];
+
+export const readingnotes = [
+  {
+    id: 1,
+    name: "Lesson 1 notes",
+    desc: "Introduction - 'How to read'",
+    cover: "./images/readingnote.jpg",
   },
 ];
