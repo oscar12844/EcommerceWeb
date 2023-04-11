@@ -5,10 +5,12 @@
   background-color: #ffffff44;
   margin: 0 40px;
 }
+
 .logo h1 {
+  padding: 15px 0;
   font-size: 35px;
   font-weight: 900;
-  margin-left: -5px;
+
 }
 .head .icon {
   margin-left: 10px;
