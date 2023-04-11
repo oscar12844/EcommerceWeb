@@ -77,7 +77,7 @@ const Header = () => {
                   <DialogTitle id="alert-dialog-title">
                     {"Are you ready to signout?"}
                   </DialogTitle>
-                  <DialogContent>
+                  <DialogContent dividers>
                     <DialogContentText id="alert-dialog-description">
                       Make sure every action is done before you signout.
                     </DialogContentText>
@@ -108,34 +108,35 @@ const Header = () => {
                   className="fas fa-sign-in-alt icon"
                   onClick={handleClickdialoglogin}
                 ></i>
-                <Dialog
-                  open={dialoglogin}
-                  onClose={handledialogCloselogin}
-                  aria-labelledby="alert-dialog-title"
-                  aria-describedby="alert-dialog-description"
-                >
-                  <DialogTitle id="alert-dialog-title">{"Login"}</DialogTitle>
-                  <DialogContent>
-                    <DialogContentText id="alert-dialog-description">
-                      You will be redirected to login page.
-                    </DialogContentText>
-                  </DialogContent>
-                  <DialogActions>
-                    <Button onClick={handledialogCloselogin} color="error">
-                      No
-                    </Button>
-                    <Button
-                      onClick={() => {
-                        handledialogCloselogin();
-                        nagivate("/login");
-                      }}
-                      color="success"
-                      autoFocus
-                    >
-                      Yes
-                    </Button>
-                  </DialogActions>
-                </Dialog>
+                {dialoglogin && (
+                  <Dialog
+                    open={dialoglogin}
+                    onClose={handledialogCloselogin}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description"
+                  >
+                    <DialogTitle id="alert-dialog-title">{"Login"}</DialogTitle>
+                    <DialogContent dividers>
+                      <DialogContentText id="alert-dialog-description">
+                        You will be redirected to login page.
+                      </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                      <Button onClick={handledialogCloselogin} color="error">
+                        No
+                      </Button>
+                      <Button
+                        onClick={() => {
+                          nagivate("/login");
+                        }}
+                        color="success"
+                        autoFocus
+                      >
+                        Yes
+                      </Button>
+                    </DialogActions>
+                  </Dialog>
+                )}
               </>
             )}
           </div>

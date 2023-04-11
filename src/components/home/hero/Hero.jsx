@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "../../common/heading/Heading";
 import "./Hero.css";
 
+
 const Hero = () => {
   return (
     <>
@@ -21,7 +22,7 @@ const Hero = () => {
                 GET STARTED NOW <i className="fa fa-long-arrow-alt-right"></i>
               </button>
               <button>
-                VIEW COURSE <i className="fa fa-long-arrow-alt-right"></i>
+                VIEW COURSE<i className="fa fa-long-arrow-alt-right"></i>
               </button>
             </div>
           </div>

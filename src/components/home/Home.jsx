@@ -5,6 +5,7 @@ import HAbout from "./HAbout";
 import Hero from "./hero/Hero";
 import Hprice from "./Hprice";
 import Testimonal from "./testimonal/Testimonal";
+import Faq from "./Faq";
 
 const Home = () => {
   useEffect(() => {
@@ -15,9 +16,10 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <AboutCard />
       <HAbout />
+      <AboutCard />
       <Testimonal />
+      <Faq />
     </>
   );
 };

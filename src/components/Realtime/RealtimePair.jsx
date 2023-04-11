@@ -2,7 +2,7 @@ import React from "react";
 import Back from "../common/back/Back";
 import PairSpeakerCard from "./PairSpeakerCard";
 import "./realtimepair.css";
-import Faq from "./Faq";
+
 
 const Pricing = () => {
   return (
@@ -13,7 +13,6 @@ const Pricing = () => {
           <PairSpeakerCard />
         </div>
       </section>
-      <Faq />
     </>
   );
 };
