@@ -13,3 +13,4 @@ app.use("/logincheck", login);
 app.use("/signup", signup);
 
 app.listen(port);
+console.log("Listening on port " + port);
