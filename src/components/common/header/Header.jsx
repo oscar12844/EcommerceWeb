@@ -179,9 +179,13 @@ const Header = () => {
           </ul>
           <div className="start">
             {login ? (
-              <div className="button">Welcome, {user}</div>
+              <div className="button" style={{ fontWeight: "bold" }}>
+                Welcome, {user}
+              </div>
             ) : (
-              <div className="button">Join VLG Now!</div>
+              <div className="button" style={{ fontWeight: "bold" }}>
+                Join VLG Now!
+              </div>
             )}
           </div>
         </nav>
