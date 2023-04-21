@@ -8,11 +8,6 @@ import Testimonal from "./testimonal/Testimonal";
 import Faq from "./Faq";
 
 const Home = () => {
-  useEffect(() => {
-    console.log(localStorage.getItem("user"));
-    console.log(localStorage.getItem("userid"));
-  }, []);
-
   return (
     <>
       <Hero />

@@ -1,26 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./css/loginStyle.module.css";
 import icons from "./fonts/material-icon/css/material-design-iconic-font.min.module.css";
 import GoogleIcon from "@mui/icons-material/Google";
 import Login_logo from "./images/login.png";
 import Button from "@mui/material/Button";
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, child, get } from "firebase/database";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import CryptoJS from "crypto-js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyAlDq8mw4rIOvmN621OGQOgrQokyAilW1k",
-  authDomain: "comp4121-ecommerce.firebaseapp.com",
-  databaseURL:
-    "https://comp4121-ecommerce-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "comp4121-ecommerce",
-  storageBucket: "comp4121-ecommerce.appspot.com",
-  messagingSenderId: "708889910845",
-  appId: "1:708889910845:web:dfccf9c90dc5a85254d454",
-  measurementId: "G-YKDH3LDWBL",
-};
+import axios from "axios";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -31,49 +17,31 @@ export default function Login() {
     password: "",
   });
 
+  const [response, setResponse] = useState({});
+
   const handleSubmit = (event) => {
-    // Prevent page reload
+    const userid = CryptoJS.SHA256(state.email).toString(CryptoJS.enc.Hex);
     event.preventDefault();
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-
-    // Initialize Realtime Database and get a reference to the service
-    const dbRef = ref(getDatabase(app));
-    console.log("connected");
-
-    const auth = getAuth();
-    const hashedEmail = CryptoJS.SHA256(state.email).toString(CryptoJS.enc.Hex);
-    signInWithEmailAndPassword(auth, state.email, state.password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        // ...
-        get(child(dbRef, "users/" + hashedEmail))
-          .then((snapshot) => {
-            console.log(state.password, state.email);
-            if (
-              snapshot.exists() &&
-              snapshot.val().password === state.password
-            ) {
-              console.log("LOGIN SUCCESSFUL");
-              localStorage.setItem("user", snapshot.val().username);
-              localStorage.setItem("userid", hashedEmail);
-              console.log(localStorage.getItem("user"));
-              console.log(localStorage.getItem("userid"));
-              navigate("/");
-            } else {
-              console.log("No data available");
-            }
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
+    try {
+      axios
+        .get("http://localhost:8000/logincheck", {
+          params: {
+            email: state.email,
+            password: state.password,
+            userid: CryptoJS.SHA256(state.email).toString(CryptoJS.enc.Hex),
+          },
+        })
+        .then((response) => {
+          localStorage.setItem("user", response.data.username);
+          localStorage.setItem("userid", userid);
+          navigate("/");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleInputChange = (event) => {
@@ -169,16 +137,6 @@ export default function Login() {
                 />
               </div>
             </form>
-            <div className={styles["social-login"]}>
-              <span className={styles["social-label"]}>Or login with</span>
-              <ul className={styles.socials}>
-                <li>
-                  <Button color="error">
-                    <GoogleIcon />
-                  </Button>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>

@@ -7,21 +7,7 @@ import Login_logo from "./images/signup-image.jpg";
 import Button from "@mui/material/Button";
 import CryptoJS from "crypto-js";
 
-import { initializeApp } from "firebase/app";
-import { getDatabase, push, ref, set } from "firebase/database";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyAlDq8mw4rIOvmN621OGQOgrQokyAilW1k",
-  authDomain: "comp4121-ecommerce.firebaseapp.com",
-  databaseURL:
-    "https://comp4121-ecommerce-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "comp4121-ecommerce",
-  storageBucket: "comp4121-ecommerce.appspot.com",
-  messagingSenderId: "708889910845",
-  appId: "1:708889910845:web:dfccf9c90dc5a85254d454",
-  measurementId: "G-YKDH3LDWBL",
-};
+import axios from "axios";
 
 export default function SignUp() {
   const [errorMessages, setErrorMessages] = useState({});
@@ -55,17 +41,6 @@ export default function SignUp() {
     // Prevent page reload
     event.preventDefault();
 
-    // check the password is the same
-
-    // Submit form
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-
-    // Initialize Realtime Database and get a reference to the service
-    const db = getDatabase(app);
-    console.log("connected");
-
     // Create a new user
 
     //should check email is not empty
@@ -92,14 +67,6 @@ export default function SignUp() {
       setemptyrepeatedPassword(false);
     }
 
-    //should check password at leadt 6 length
-    if (state.password.length < 6) {
-      setvalidPassword(false);
-      return;
-    } else {
-      setvalidPassword(true);
-    }
-
     //should check repeated password is the same as password
     if (state.password !== state.repeatedPassword) {
       setcorrectrepeatedPassword(false);
@@ -108,35 +75,27 @@ export default function SignUp() {
       setcorrectrepeatedPassword(true);
     }
 
-    const auth = getAuth();
-    const hashedEmail = CryptoJS.SHA256(state.email).toString(CryptoJS.enc.Hex);
+    //after checking, make HTTP Post request to localhost:8000/api/signup
+    const userid = CryptoJS.SHA256(state.email).toString(CryptoJS.enc.Hex);
+    axios
+      .post("http://localhost:8000/signup", {
+        username: state.username === "" ? state.email : state.username,
+        email: state.email,
+        password: state.password,
+        userid: userid,
+      })
+      .then((response) => {
+        setvalidPassword(true);
 
-    createUserWithEmailAndPassword(auth, state.email, state.password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log(user);
-        // ...
-        set(ref(db, "users/" + hashedEmail), {
-          username: state.username === "" ? state.email : state.username,
-          password: state.password,
-        })
-          .then(() => {
-            // Data saved successfully!
-            // show a pop up screen
-            // back to login page
-            navigate("/login");
-          })
-          .catch((error) => {
-            // The write failed...
-            // show a pop up screen
-          });
+        if (response.data.accepted === true) {
+          navigate("/login");
+        }
       })
       .catch((error) => {
-        //when email is already used by another account error, error is printed in console
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
+        console.log(error);
+        if (error.response.status === 406) {
+          setvalidPassword(false);
+        }
       });
   };
 
@@ -220,7 +179,7 @@ export default function SignUp() {
                 <p
                   className={styles["fst-italic"] + " " + styles["text-danger"]}
                 >
-                  *The password must be at least 6 length long
+                  *The password must be at least 8 length long
                 </p>
               ) : (
                 ""
