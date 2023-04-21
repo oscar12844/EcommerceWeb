@@ -174,7 +174,12 @@ const Header = () => {
             </li>
           </ul>
           <div className="start">
-            <div className="button">START TO LEARN</div>
+            <div className="button">
+              Welcome,{" "}
+              {localStorage.getItem("user").length > 10
+                ? localStorage.getItem("user").slice(0, 10) + "..."
+                : localStorage.getItem("user")}
+            </div>
           </div>
         </nav>
       </header>
