@@ -27,7 +27,7 @@ router.get("/", async (req, res) => {
 
   // Initialize Realtime Database and get a reference to the service
   const dbRef = ref(getDatabase(app));
-  console.log("connected");
+  console.log("connected to db");
 
   const auth = getAuth();
   signInWithEmailAndPassword(auth, email, password)

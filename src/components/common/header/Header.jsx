@@ -14,9 +14,12 @@ const Header = () => {
   const nagivate = useNavigate();
   const [login, setLogin] = useState(false);
   const [delay, setDelay] = useState(false);
+  const [user, setUser] = useState("");
   useEffect(() => {
     if (localStorage.getItem("user")) {
       setLogin(true);
+      user = user.length > 10 ? user.slice(0, 10) + "..." : user;
+      setUser(user);
     } else {
       setLogin(false);
     }
@@ -174,12 +177,11 @@ const Header = () => {
             </li>
           </ul>
           <div className="start">
-            <div className="button">
-              Welcome,{" "}
-              {localStorage.getItem("user").length > 10
-                ? localStorage.getItem("user").slice(0, 10) + "..."
-                : localStorage.getItem("user")}
-            </div>
+            {login ? (
+              <div className="button">Welcome, {user}</div>
+            ) : (
+              <div className="button">Join VLG Now!</div>
+            )}
           </div>
         </nav>
       </header>

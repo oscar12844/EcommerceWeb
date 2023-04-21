@@ -35,7 +35,7 @@ router.post("/", async (req, res) => {
 
   // Initialize Realtime Database and get a reference to the service
   const db = getDatabase(app);
-  console.log("connected");
+  console.log("connected to db");
   const auth = getAuth();
 
   createUserWithEmailAndPassword(auth, email, password)
