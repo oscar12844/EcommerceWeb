@@ -16,6 +16,7 @@ const Header = () => {
   const [delay, setDelay] = useState(false);
   const [user, setUser] = useState("");
   useEffect(() => {
+    let user = localStorage.getItem("user");
     if (localStorage.getItem("user")) {
       setLogin(true);
       user = user.length > 10 ? user.slice(0, 10) + "..." : user;
