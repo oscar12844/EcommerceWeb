@@ -13,6 +13,7 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 import Reading from "./components/readingnotes/Reading";
 import Writing from "./components/writingnotes/Writing";
+import Course from "./dashboard/index"
 function App() {
   return (
     <>
@@ -74,9 +75,7 @@ function App() {
             path="/mycourse"
             element={
               <>
-                <Header />
-                <Blog />
-                <Footer />
+                <Course />
               </>
             }
           />
