@@ -2,6 +2,13 @@ import React from 'react'
 import { Container, Typography, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
+import BackpackIcon from '@mui/icons-material/Backpack';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
+import { ProSidebarProvider } from 'react-pro-sidebar';
 
 export default function EnrolledLive() {
 
@@ -21,6 +28,19 @@ export default function EnrolledLive() {
 
   return (
     <>
+       <div style={{ display: 'flex', height: '100%' }}>
+        <ProSidebarProvider>
+      <Sidebar>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' }}>
+          <img src={logo} alt="logo" style={{ width: '100px', height: '100px' }} />
+        </div>
+        <Menu>
+          <MenuItem icon={<BackpackIcon />} component={<Link to="/mycourse" />}> Current Course</MenuItem>
+          <MenuItem icon={<LiveTvIcon />} component={<Link to="/live" />}> Enrolled Live</MenuItem>
+          <MenuItem icon={<ExitToAppIcon />} component={<Link to="/" />}> Back to Main Page</MenuItem>
+        </Menu>
+      </Sidebar>
+      </ProSidebarProvider>
     <Box sx={{ width: 'auto',mt: 4, mb: 4  }} maxWidth="lg">
     <Grid container sx={{ p: 2 }}> 
       <Typography variant="h4">Upcoming Live</Typography>
@@ -69,7 +89,7 @@ export default function EnrolledLive() {
               </Grid>       
         </Grid>        
     </Container>
-
+    </div>
     </>
   )
 }

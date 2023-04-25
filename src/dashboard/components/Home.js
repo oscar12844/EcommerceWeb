@@ -30,7 +30,7 @@ export default function Home(subject) {
       </Grid>
       </Box>
       <Box component="span" sx={{ display: 'block', maxHeight:400 }}>&nbsp; </Box>
-    <Grid container  columns={{ xs: 4, sm: 8, md: 12 }} >
+    <Grid container  columns={{ xs: 4, sm: 8, md: 12 }} sx={{p:2,}}>
     {
         currentCourse.map((course, index) => {
             return (

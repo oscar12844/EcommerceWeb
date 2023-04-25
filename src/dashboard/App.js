@@ -1,6 +1,8 @@
-import './App.css';
+import './dashboard.css';
 import React from 'react';
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
+import { ProSidebarProvider } from 'react-pro-sidebar';
+import { BrowserRouter, Navigate } from "react-router-dom";
 import BackpackIcon from '@mui/icons-material/Backpack';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
@@ -10,7 +12,6 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import NoMatch from './components/NoMatch';
 import EnrolledLive from './components/EnrolledLive';
 import logo from './assets/logo.png'
 import Course from './components/Course';
@@ -25,27 +26,28 @@ function App() {
   };
 
   return (
+
+    <ProSidebarProvider>
     <div style={{ display: 'flex', height: '100%' }}>
       <Sidebar>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' }}>
           <img src={logo} alt="logo" style={{ width: '100px', height: '100px' }} />
         </div>
         <Menu>
-          <MenuItem icon={<BackpackIcon />} component={<Link to="/" />}> Current Course</MenuItem>
-          <MenuItem icon={<LiveTvIcon />} component={<Link to="live" />}> Enrolled Live</MenuItem>
-          <MenuItem icon={<ExitToAppIcon />} component={<Link to="/back" />}> Back to Main Page</MenuItem>
+          <MenuItem icon={<BackpackIcon />} component={<Link to="/mycourse" />}> Current Course</MenuItem>
+          <MenuItem icon={<LiveTvIcon />} component={<Link to="/live" />}> Enrolled Live</MenuItem>
+          <MenuItem icon={<ExitToAppIcon />} component={<Link to="/" />}> Back to Main Page</MenuItem>
         </Menu>
       </Sidebar>
       <main>
-          <Routes>
-            <Route path="/" element={<Home item={subject} />} />
-            <Route path="live" element={<EnrolledLive />} />
-            <Route path=":course" element={<Course item={subject}  />} />
-            <Route path="*" element={<NoMatch />} />
+          <Routes path="/" element={<Home item={subject} />}>
+              <Route index element={<Home />} />
+              <Route path="/mycourse" element={<Course item={subject} />} />
           </Routes>
       </main>
     </div>
-    
+    </ProSidebarProvider>
+
   );
 }
 

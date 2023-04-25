@@ -13,7 +13,8 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 import Reading from "./components/readingnotes/Reading";
 import Writing from "./components/writingnotes/Writing";
-import Course from "./dashboard/index"
+import Course from "./dashboard/App"
+import EnrolledLive from "./dashboard/components/EnrolledLive";
 function App() {
   return (
     <>
@@ -107,6 +108,22 @@ function App() {
                 <Header />
                 <Contact />
                 <Footer />
+              </>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <>
+                <div>404 Not Found</div>
+              </>
+            }
+          />
+          <Route
+            path="/live"
+            element={
+              <>
+                <EnrolledLive />
               </>
             }
           />
