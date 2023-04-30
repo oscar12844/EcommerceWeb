@@ -167,9 +167,6 @@ const Header = () => {
                 <li>
                   <Link to="/mycourse">MyCourse</Link>
                 </li>
-                <li>
-                  <Link to="/realtimepair">Real-Time Pair</Link>
-                </li>
               </>
             ) : null}
 

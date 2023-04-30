@@ -4,16 +4,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./components/about/About";
 import CourseHome from "./components/allcourses/CourseHome";
 import Team from "./components/team/Team";
-import RealtimePair from "./components/Realtime/RealtimePair";
-import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/common/footer/Footer";
 import Home from "./components/home/Home";
 import Login from "./Login";
 import SignUp from "./SignUp";
-import Reading from "./components/readingnotes/Reading";
-import Writing from "./components/writingnotes/Writing";
-import Course from "./dashboard/App"
+import Reading from "./dashboard/components/Reading";
+import Writing from "./dashboard/components/Writing";
+import Speaking from "./dashboard/components/Speaking";
+import Listening from "./dashboard/components/Listening";
+import Course from "./dashboard/App";
 import EnrolledLive from "./dashboard/components/EnrolledLive";
 function App() {
   return (
@@ -63,16 +63,6 @@ function App() {
             }
           />
           <Route
-            path="/realtimepair"
-            element={
-              <>
-                <Header />
-                <RealtimePair />
-                <Footer />
-              </>
-            }
-          />
-          <Route
             path="/mycourse"
             element={
               <>
@@ -84,9 +74,7 @@ function App() {
             path="/reading"
             element={
               <>
-                <Header />
                 <Reading />
-                <Footer />
               </>
             }
           />
@@ -95,9 +83,25 @@ function App() {
             path="/writing"
             element={
               <>
-                <Header />
                 <Writing />
-                <Footer />
+              </>
+            }
+          />
+
+          <Route
+            path="/speaking"
+            element={
+              <>
+                <Speaking />
+              </>
+            }
+          />
+
+          <Route
+            path="/listening"
+            element={
+              <>
+                <Listening />
               </>
             }
           />
