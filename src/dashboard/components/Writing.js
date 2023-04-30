@@ -55,7 +55,7 @@ export default function Writing() {
                   variant="h4"
                   sx={{ ml: 4, textDecoration: "underline" }}
                 >
-                  English Listening Lesson
+                  English Writing Lesson
                 </Typography>
               </Grid>
               <Grid item xs={12}>
